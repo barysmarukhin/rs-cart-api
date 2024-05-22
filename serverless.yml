@@ -1,11 +1,15 @@
-service: rs-cart-api
+service: cart-api
 
 plugins:
   - serverless-offline
 
+useDotenv: true
+
 provider:
   name: aws
   runtime: nodejs20.x
+  region: ${env:AWS_REGION}
+  profile: ${env:AWS_PROFILE}
 
 functions:
   main:
