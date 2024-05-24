@@ -10,6 +10,12 @@ provider:
   runtime: nodejs20.x
   region: ${env:AWS_REGION}
   profile: ${env:AWS_PROFILE}
+  environment:
+    DB_USER: ${env:DB_USER}
+    DB_SERVER: ${env:DB_SERVER}
+    DB_PASSWORD: ${env:DB_PASSWORD}
+    DB_PORT: ${env:DB_PORT}
+    DB_DATABASE: ${env:DB_DATABASE}
 
 functions:
   main:
